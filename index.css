@@ -8,10 +8,14 @@
   margin: 0 auto;
 }
 .wrapper .img-slider {
+  margin: 0 auto;
   position: relative;
   display: flex;
   overflow: hidden;
-  width: 100%;
+  width: 700px;
+  height: auto;
+  /* width: 100%; */
+  /* height: 600px; */
 }
 .img-slider img {
   width: 100%;
