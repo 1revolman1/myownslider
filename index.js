@@ -6,29 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
   let slide_mover = document.querySelector("[img-slide] .block");
   console.log(slide_mover);
   slide_mover.addEventListener("mousedown", mouseDown);
-  function mouseLeave(e) {
-    console.log("Leave ", e);
-    if (window.event.stopPropagation) window.event.stopPropagation();
-    window.event.cancelBubble = true;
-    e.cancelBubble = true;
-    slide_mover.removeEventListener("mousemove", mouseMove);
-    block.removeEventListener("mouseup", mouseUp);
-    slide_mover.removeEventListener("mouseleave", mouseLeave);
-  }
+  // function mouseLeave(e) {
+  //   console.log("Leave ", e);
+  //   if (window.event.stopPropagation) window.event.stopPropagation();
+  //   window.event.cancelBubble = true;
+  //   e.cancelBubble = true;
+  //   slide_mover.removeEventListener("mousemove", mouseMove);
+  //   block.removeEventListener("mouseup", mouseUp);
+  //   slide_mover.removeEventListener("mouseleave", mouseLeave);
+  // }
   function mouseUp(e) {
     console.log("Up ", e);
-    if (window.event.stopPropagation) window.event.stopPropagation();
-    window.event.cancelBubble = true;
-    e.cancelBubble = true;
+    // if (window.event.stopPropagation) window.event.stopPropagation();
+    // window.event.cancelBubble = true;
+    // e.cancelBubble = true;
     slide_mover.removeEventListener("mousemove", mouseMove);
     block.removeEventListener("mouseup", mouseUp);
     slide_mover.removeEventListener("mouseleave", mouseLeave);
   }
   function mouseMove(e) {
     console.log("Move", event);
-    if (window.event.stopPropagation) window.event.stopPropagation();
-    window.event.cancelBubble = true;
-    e.cancelBubble = true;
+    // if (window.event.stopPropagation) window.event.stopPropagation();
+    // window.event.cancelBubble = true;
+    // e.cancelBubble = true;
     let mainIMG = document.querySelectorAll("[img-slide] img")[1];
     let mainIMG_width = mainIMG.offsetWidth;
     let mainIMG_height = mainIMG.offsetHeight;
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function mouseDown(e) {
     console.log("Down ", e);
-    if (window.event.stopPropagation) window.event.stopPropagation();
-    window.event.cancelBubble = true;
-    e.cancelBubble = true;
+    // if (window.event.stopPropagation) window.event.stopPropagation();
+    // window.event.cancelBubble = true;
+    // e.cancelBubble = true;
     slide_mover.addEventListener("mousemove", mouseMove);
     block.addEventListener("mouseup", mouseUp);
     slide_mover.addEventListener("mouseleave", mouseLeave);
